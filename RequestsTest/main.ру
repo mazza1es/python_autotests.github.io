@@ -1,0 +1,25 @@
+import requests
+URL= "https://api.pokemonbattle.ru/v2"
+Token="f173887b05d2d1b88b3fe78261839deb"
+header= {"Content-Type" : "application/json","trainer_token":Token }
+body_registration= {
+    "name" : "Бульбазавр",
+    "photo_id": 12
+}
+body_conformation= {
+    "pokemon_id": "374025",
+    "name": "Гева",
+    "photo_id": 2
+}
+body_content= {
+    "pokemon_id": "369527"
+}
+"""response=requests.post(url=f"{URL}/pokemons", headers=header,json=body_registration)
+print(response.text)"""
+
+"""response_confirmation=requests.put(url=f"{URL}/pokemons", headers=header,json=body_conformation)
+print(response_confirmation.text)"""
+
+"""response_content=requests.post(url=f"{URL}/trainers/add_pokeball",headers=header,json=body_content)
+print(response_content.text)"""
+
